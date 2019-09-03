@@ -8,6 +8,11 @@ class FlightSerializer(serializers.ModelSerializer):
 		model = Flight
 		fields = ['destination', 'time', 'price', 'id']
 
+class CreateBookingSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Booking
+		exclude = ['user']
+
 
 class BookingSerializer(serializers.ModelSerializer):
 	class Meta:
